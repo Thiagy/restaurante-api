@@ -32,7 +32,6 @@ app.use("/", (req, res) => {
   res.send("Hello world");
 });
 
-
 const mongodb_url = process.env.mongodb_url;
 
 mongoose
@@ -46,6 +45,4 @@ mongoose
       console.log("Erro ao tentar conectar com o banco de dados " + err);
   });
 
-
-
-
+module.exports = app; 
