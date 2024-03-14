@@ -13,7 +13,7 @@ const dinner = require('./routes/dinner');
 const reservation = require('./routes/reservation');
 
 const corsOptions = {
-  origin: '*',
+  origin: 'https://restaurantes-app-mu.vercel.app',
   optionsSuccessStatus: 200
 };
 
