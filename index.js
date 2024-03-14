@@ -12,10 +12,10 @@ const lunch = require('./routes/lunch');
 const dinner = require('./routes/dinner');
 const reservation = require('./routes/reservation');
 
-
 const allowedOrigins = ['https://restaurantes-app-mu.vercel.app']; 
 const corsOption = {
     origin: allowedOrigins,
+    optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOption));
@@ -28,7 +28,6 @@ app.use('/', breakfast);
 app.use('/', lunch);
 app.use('/', dinner);
 app.use('/', reservation);
-
 
 app.use("/", (req, res) => {
   res.send("Hello world");
