@@ -12,12 +12,14 @@ const lunch = require('./routes/lunch');
 const dinner = require('./routes/dinner');
 const reservation = require('./routes/reservation');
 
-const corsOptions = {
-  origin: 'https://restaurantes-app-mu.vercel.app',
-  optionsSuccessStatus: 200
+
+const allowedOrigins = ['https://restaurantes-app-mu.vercel.app']; 
+const corsOption = {
+    origin: allowedOrigins,
 };
 
-app.use(cors(corsOptions));
+app.use(cors(corsOption));
+
 app.use(express.json({ limit: '100mb' }));
 app.use(express.urlencoded({ extended: true }));
 
